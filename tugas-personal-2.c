@@ -53,8 +53,7 @@ int main() {
     char input;
     char months[][10] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     int index, vowelCount, nonVowelCount;
-    int matchingMonths[12]; // Array untuk menyimpan indeks bulan yang cocok
-
+    int matchingMonths[12]; 
     printf("Masukkan huruf (A-Z): ");
     scanf(" %c", &input);
 
@@ -75,7 +74,7 @@ int main() {
             scanf("%d", &index);
 
             if (index >= 1 && index <= matchCount) {
-                index = matchingMonths[index - 1]; // Ambil indeks yang sesuai
+                index = matchingMonths[index - 1]; 
                 vowelCount = countVowels(months[index]);
                 nonVowelCount = countNonVowels(months[index]);
 
@@ -85,7 +84,7 @@ int main() {
                 printf("Input bulan tidak valid.\n");
             }
         } else if (matchCount == 1) {
-            // Jika hanya ada satu bulan yang cocok, lanjutkan dengan bulan tersebut
+           
             index = matchingMonths[0];
             vowelCount = countVowels(months[index]);
             nonVowelCount = countNonVowels(months[index]);
